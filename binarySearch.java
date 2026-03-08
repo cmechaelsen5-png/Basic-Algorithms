@@ -1,17 +1,17 @@
-import Java.util.Scanner;
-public Class binarySearch{
-  public static int binarySearch(int[] arr int key){
+import java.util.Scanner;
+public class binarySearch{
+  public static int binarySearch(int[] numbers, int key){
     int low = 0;
-    int high = arr.length-1; 
-    while (high>=low){
+    int high = numbers.length-1; 
+    while (high >= low){
      int mid = (high + low)/2;
-      if (arr[mid] == key){
+      if (numbers[mid] == key){
         return mid;
       }
-      else if (arr[mid] < key){
+      else if (numbers[mid] < key){
         low = mid + 1;
       }
-      else if (arr[mid] > key){
+      else if (numbers[mid] > key){
         high = mid - 1;
       }
     }
@@ -23,19 +23,14 @@ public Class binarySearch{
     int key;
     int keyIndex;
     System.out.println("Enter a number: ");
-    Scanner scnr = new Scanner(System.in);
     key = scnr.nextInt();
-    keyIndex = binarySearch(arr, key);
+    keyIndex = binarySearch(numbers, key);
     if (keyIndex != -1){
-      System.out.println(key + " Found at index: " keyIndex);
+      System.out.println(key + " Found at index: " + keyIndex);
     }
     else{
-      System.out.prinln("Value not found.");
+      System.out.println("Value not found.");
     }
     scnr.close();
   }
 }
-    
-      
-  
-    
