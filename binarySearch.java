@@ -2,9 +2,9 @@ import Java.util.Scanner;
 public Class binarySearch{
   public static int binarySearch(int[] arr int key){
     int low = 0;
-    int mid = (hig+low)/2;
     int high = arr.length-1; 
     while (high>=low){
+     int mid = (high + low)/2;
       if (arr[mid] == key){
         return mid;
       }
